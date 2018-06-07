@@ -1,0 +1,2 @@
+class MaintenanceEventsController < ApplicationController
+end
