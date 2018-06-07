@@ -21,5 +21,12 @@ Rails.application.routes.draw do
     get '/maintenance_events/:id/edit' => 'maintenance_events#edit'
     patch '/maintenance_events/:id' => 'maintenance_events#update'
     delete 'maintenance_events/:id' => 'maintenance_events#destroy' 
+
+    get '/history_events/new' => 'history_events#new'
+    post '/history_events' => 'history_events#create'
+    get '/history_events/:id' => 'history_events#show'
+    get '/history_events/:id/edit' => 'history_events#id'
+    patch '/history_events/:id' => 'history_events#update'
+    delete '/history_events/:id' => 'history_events#destroy'
   end
 end
