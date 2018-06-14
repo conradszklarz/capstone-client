@@ -1,0 +1,26 @@
+<h2><%= @car_part["car_part"] %></h2>
+<h3>Maintenance Event Id: <%= @car_part["formatted"]["maintenance_event_id"] %></h3>
+<h4>Date: <%= @car_part["date"] %><h4>
+
+
+<h4>Part Number: </h4>
+<ul>
+<% @car_part["formatted"][""].each do || %>
+
+  <li><%=  %></li>
+
+<% end %>
+</ul>
+
+<h4>: </h4>
+  <ol>
+    <% @car_part["formatted"][""].each do || %>
+    <li><%=  %></li>
+    <% end %>
+  </ol>
+
+  
+  <a href="/client/car_parts/<% @car_part['id'] %>/edit">Edit</a>
+
+  <a href="/client/car_parts/<% @car_part['id'] %>" data-method="deleted">Delete</a>
+  <h6>created on <% @car_part["formatted"]["created_at"] %></h6>

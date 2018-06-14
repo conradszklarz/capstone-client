@@ -1,0 +1,17 @@
+<!-- <form action="/client/car_parts" method="post"> -->
+  <%=  form_tag "/client/car_parts", method: :post do %>
+  <div>
+    Maintenance Event Id: <input type="text" name="maintenance_event_id">
+  </div>
+<div>
+  Date: <input type="text" name="date">
+</div>
+<div>
+  Part Number: <input type="text" name="part_number">
+  </div>
+  <div>
+    Price: <input type="text" name="price">
+  </div>
+  <input type="submit" value="Create Car Part">
+<!-- </form> -->
+<% end %>

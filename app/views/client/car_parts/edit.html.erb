@@ -1,0 +1,16 @@
+<% form_tag "/client/car_parts/#{ @car_part_id }", method: :patch do %>
+  <div>
+    Maintenance Event Id: <input type="text" name="maintenance_event_id" value="<% @car_part['maintenance_event_id'] %>">
+  </div>
+<div>
+  Date: <input type="text" name="Date" value="<% @car_part['Date'] %>">
+</div>
+<div>
+  Part Number: <input type="text" name="part_number" value="<% @car_part['part_number'] %>">
+  </div>
+  <div>
+    Price: <input type="text" name="price" value="<% @car_part['price'] %>">
+  </div>
+  <input type="submit" value="Create Car Part">
+<!-- </form> -->
+<% end %>
