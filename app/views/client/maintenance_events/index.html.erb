@@ -1,0 +1,11 @@
+<h1>Maintenance Events</h1>
+
+<%= @maintenance_events.each do |maintenance_event| %>
+<p>
+  <%= maintenance_event["car_id"] %> 
+  <%= maintenance_event["price"] %> 
+  <%= maintenance_event["provider"] %> 
+  <%= maintenance_event["date"] %>
+</p>
+<% end %>
+

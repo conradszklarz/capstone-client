@@ -1,0 +1,8 @@
+<h1>Car Services</h1>
+
+<%= @car_services.each do |car_service| %>
+<p>
+  <%= car_service["car_id"] %> 
+  <%= car_service["service_id"] %> 
+</p>
+<% end %>

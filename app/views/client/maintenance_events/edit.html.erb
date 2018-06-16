@@ -1,0 +1,23 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/maintenance_events/#{@maintenance_event["id"]}", method: :patch do %>
+  <div>
+    Car Id: <input type="text" name="car_id" value="<%= @maintenance_event["car_id"] %>" />
+  </div>
+  <div>
+    Price: <input type="text" name="price" value="<%= @maintenance_event["price"] %>" />
+  </div>
+  <div>
+    Date: <input type="text" name="date" value="<%= @maintenance_event["date"] %>" />
+  </div>
+  <div>
+    Provider: <input type="text" name="provider" value="<%= @maintenance_event["provider"] %>">
+  </div>
+  <input type="submit" name="" value="Update Maintenance Event"/>
+<% end %>

@@ -1,26 +1,25 @@
-<h2><%= @car_part["car_part"] %></h2>
-<h3>Maintenance Event Id: <%= @car_part["formatted"]["maintenance_event_id"] %></h3>
-<h4>Date: <%= @car_part["date"] %><h4>
+<h2><%= @car_part["name"] %></h2>
+<h4>Price: <%= @car_part[["price"] %></h4>
+<h4>Maintenance Event Id: <%= @car_part["maintenance_event_id"] %></h4>
+<h4>Part Number: <%= @car_part["part_number"] %></h4>
+<h4>Date: <%= @car_part["date"] %></h4>
 
-
-<h4>Part Number: </h4>
-<ul>
-<% @car_part["formatted"][""].each do || %>
-
-  <li><%=  %></li>
-
+<% @car_part["images"].each do |image| %>
+  <!-- <img src="<%= image["url"] %>"> -->
 <% end %>
-</ul>
+<br>
 
-<h4>: </h4>
-  <ol>
-    <% @car_part["formatted"][""].each do || %>
-    <li><%=  %></li>
-    <% end %>
-  </ol>
+<%= form_tag "/client/car_parts", method: :post do %>
+  <!-- <input type="hidden" name="car_part_id" value="<%= @car_part['id'] %>"> -->
+  <div>
+    <!-- Quantity: <input type="text" name="quantity"> -->
+  </div>
+  <!-- <input type="submit" value="Add To Cart"> -->
+<% end %>
 
-  
-  <a href="/client/car_parts/<% @car_part['id'] %>/edit">Edit</a>
+<!-- <h6>Supplier: <%= @car_part["supplier"]["name"] %></h6> -->
 
-  <a href="/client/car_parts/<% @car_part['id'] %>" data-method="deleted">Delete</a>
-  <h6>created on <% @car_part["formatted"]["created_at"] %></h6>
+
+<a href="/client/car_parts/<%= @car_part['id'] %>/edit">Edit</a>
+<a href="/client/car_parts/<%= @car_part['id'] %>" data-method="delete">Delete</a>
+

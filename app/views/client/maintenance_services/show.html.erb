@@ -1,0 +1,23 @@
+<h2><%= @maintenance_service["name"] %></h2>
+<h4>Service Id: <%= @maintenance_service[["service_id"] %></h4>
+<h4>Maintenance Event Id: <%= @maintenance_service["maintenance_event_id"] %></h4>
+
+<% @maintenance_service["images"].each do |image| %>
+  <!-- <img src="<%= image["url"] %>"> -->
+<% end %>
+<br>
+
+<%= form_tag "/client/maintenance_services", method: :post do %>
+  <!-- <input type="hidden" name="maintenance_service_id" value="<%= @maintenance_service['id'] %>"> -->
+  <div>
+    <!-- Quantity: <input type="text" name="quantity"> -->
+  </div>
+  <!-- <input type="submit" value="Add To Cart"> -->
+<% end %>
+
+<!-- <h6>Supplier: <%= @maintenance_service["supplier"]["name"] %></h6> -->
+
+
+<a href="/client/maintenance_services/<%= @maintenance_service['id'] %>/edit">Edit</a>
+<a href="/client/maintenance_services/<%= @maintenance_service['id'] %>" data-method="delete">Delete</a>
+

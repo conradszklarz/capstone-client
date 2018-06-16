@@ -1,17 +1,12 @@
-<div class="row">
-  <% @car_parts.each do |car_part| %>
-    <div class="col-md-5">
+<h1>Car Parts</h1>
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= car_part["title"] %></h5>
-          <p class="card-text">Maintenance Event Id: <%= car_part["maintenance_event_id"] %></p>
-          <p class="card-text">: <%= car_part["car_part"] %></p>
-          <a href="/client/car_parts/<%= car_part["id"] %>" class="btn btn-primary">More Info</a>
-        </div>
-      </div>
+<%= @car_parts.each do |car_part| %>
+<p>
+  <%= car_part["maintenance_event_id"] %> 
+  <%= car_part["price"] %> 
+  <%= car_part["part_number"] %> 
+  <%= car_part["date"] %>
+</p>
+<% end %>
 
 
-    </div>
-  <% end %>
-</div>

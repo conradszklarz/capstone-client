@@ -1,0 +1,26 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/cars/#{@car["id"]}", method: :patch do %>
+  <div>
+    User Id: <input type="text" name="user_id" value="<%= @car["user_id"] %>" />
+  </div>
+  <div>
+    Year: <input type="text" name="year" value="<%= @car["year"] %>" />
+  </div>
+  <div>
+    Make: <input type="text" name="make" value="<%= @car["make"] %>" />
+  </div>
+  <div>
+    Model: <input type="text" name="model" value="<%= @car["model"] %>">
+  </div>
+  <div>
+    Mileage: <input type="text" name="mileage" value="<%= @car["mileage"] %>">
+  </div>
+  <input type="submit" name="" value="Update Car"/>
+<% end %>

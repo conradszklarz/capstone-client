@@ -1,0 +1,8 @@
+<h1>Maintenance Services</h1>
+
+<%= @maintenance_services.each do |maintenance_service| %>
+<p>
+  <%= maintenance_service["maintenance_event_id"] %> 
+  <%= maintenance_service["service_id"] %> 
+</p>
+<% end %>
