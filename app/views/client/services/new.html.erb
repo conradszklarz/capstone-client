@@ -1,0 +1,23 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/services", method: :post do %>
+  <div>
+    Name: <input type="text" name="name" value="<%= @service['name'] %>" />
+  </div>
+  <div>
+    Mileage Marker: <input type="text" name="mileage_marker" value="<%= @service['mileage_marker'] %>" />
+  </div>
+  <div>
+    Time Marker: <input type="text" name="time_marker" value="<%= @service['time_marker'] %>" />
+  </div>
+  <div>
+    Time Increment: <input type="text" name="time_increment" value="<%= @service['time_increment'] %>">
+  </div>
+  <input type="submit" name="" value="Create Service" />
+<% end %>

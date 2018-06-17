@@ -1,0 +1,24 @@
+<h2><%= @service["name"] %></h2>
+<h4>Name: <%= @service[["name"] %></h4>
+<h4>Mileage Marker: <%= @service["mileage_marker"] %></h4>
+<h4>Time Increment: <%= @service["time_increment"] %></h4>
+<h4>Time Marker: <%= @service["time_marker"] %></h4>
+
+<% @service["images"].each do |image| %>
+  <!-- <img src="<%= image["url"] %>"> -->
+<% end %>
+<br>
+
+<%= form_tag "/client/services", method: :post do %>
+  <!-- <input type="hidden" name="service_id" value="<%= @service['id'] %>"> -->
+  <div>
+    <!-- Quantity: <input type="text" name="quantity"> -->
+  </div>
+  <!-- <input type="submit" value="Add To Cart"> -->
+<% end %>
+
+<!-- <h6>Supplier: <%= @service["supplier"]["name"] %></h6> -->
+
+
+<a href="/client/services/<%= @service['id'] %>/edit">Edit</a>
+<a href="/client/services/<%= @service['id'] %>" data-method="delete">Delete</a>
