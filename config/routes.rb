@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-      # add users routes
-      # add sessions routes
-      
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
+
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  delete "/logout" => "sessions#destroy"
+
 namespace :client do
       get '/car_parts' => 'car_parts#index'
       get '/car_parts/new' => 'car_parts#new'

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-def new
+  def new
     render 'new.html.erb'
   end
 
@@ -12,7 +12,7 @@ def new
                       }
 
     response = Unirest.post(
-                            "http://localhost:3000/users",
+                            "http://localhost:3000/api/users",
                             parameters: client_params
                             )
     
@@ -22,8 +22,7 @@ def new
       redirect_to '/'
     else
       flash[:warning] = 'Invalid email or password!'
-      redirect_to '/signup'
+       redirect_to '/signup'
     end
   end
-end                                  
-
+end
