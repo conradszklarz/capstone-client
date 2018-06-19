@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="vue-app">
+
+    <router-view></router-view>
+
+  </div>
+</body>
+</html>
+
+<template id="home-page">
+  <div class="vue-component">
+
+
+    <h1>Intro to Vue.js</h1>
+
+    <p>{{ message }}</p>
+    <input v-model="message">
+
+    <h2>Reviews</h2>
+
+    <ul>
+      <li v-for="review in reviews" v-if="false">
+        {{ review.rating }} STARS - {{ review.reviewer }}: {{ review.text }}
+      </li>
+    </ul>>
+
+    <div>
+      Review: <input v-model="newReview.text">
+      Rating: <input v-model="newReview.rating">
+      Your Name: <input v-model="newReview.reviewer">
+      <button v-on:click="addReview()">Add Review</button>
+    </div>
+
+  </div>
+</template>

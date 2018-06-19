@@ -36,7 +36,7 @@ class Client::CarPartsController < ApplicationController
       flash[:success] = "Successfully created Car Part"
       redirect_to "/client/car_parts/"
     elsif response.code == 401
-      flash[:warning] = "You are not Authorized to make a car_part"
+      flash[:warning] = "You are not Authorized to make a car part"
       redirect_to "/"
     else
       @errors = response.body["errors"]
