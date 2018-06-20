@@ -18,8 +18,9 @@ def create
   
   if response.code == 201
     session[:jwt] = response.body["jwt"]
+    user_id = response.body["user"]["id"]
     flash[:success] = 'Successfully logged in!'
-    redirect_to '/client/maintenance_events'
+    redirect_to "/users/#{user_id}"
   else
     flash[:warning] = 'Invalid email or password!'
     redirect_to '/login'

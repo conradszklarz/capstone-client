@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   get "/signup" => "users#new"
-  post "/users" => "users#create"
+  get '/users' => 'users#index'
+  get '/users' => 'users#new'
+  get '/users/:id/:edit' => 'users#edit'
+  patch '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
+  get '/users/:id' => 'users#show'
+  post '/users' => 'users#create'
 
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"

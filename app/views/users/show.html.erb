@@ -1,0 +1,16 @@
+<h1>Enter Your Car Information</h1>
+<%= form_tag '/users', method: :post do  %>
+  <div>
+    Year: <input type="text" name="year">
+  </div>
+  <div>
+    Make: <input type="text" name="make">
+  </div>
+  <div>
+    Model: <input type="text" name="model">
+  </div>
+  <div>
+    Mileage: <input type="decimal" name="mileage">
+  </div>
+  <input type="submit" value="Submit">
+<% end %>
