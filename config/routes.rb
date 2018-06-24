@@ -41,7 +41,7 @@ namespace :client do
       
       get '/cars' => 'cars#index'
       get '/cars/new' => 'cars#new'
-      post'/cars' => 'cars#create'
+      post '/cars' => 'cars#create'
       get '/cars/:id' => 'cars#show'
       get '/cars/:id/edit' => 'cars#edit'
       patch '/cars/:id' => 'cars#update'

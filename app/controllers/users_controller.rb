@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    response = Unirest.get("http://localhost:3000/users")
+    response = Unirest.get("http://localhost:3000/api/users")
     @users = response.body
     render 'index.html.erb'
   end
@@ -33,14 +33,14 @@ class UsersController < ApplicationController
   end
 
   def edit
-    response = Unirest.get("http://localhost:3000/users/#{params[:id]}")
+    response = Unirest.get("http://localhost:3000/api/users/#{params[:id]}")
     @user = response.body
     render 'edit.html.erb'
   end
 
   def show
     user_id = params[:id]
-    response = Unirest.get("http://localhost:3000/users/#{user_id}")
+    response = ApiHelper.get("/users/#{user_id}")    
     @user = response.body
     render 'show.html.erb'
   end
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
                     }
 
     response = Unirest.patch(
-                            "http://localhost:3000/users/#{params[:id]}",
+                            "http://localhost:3000/api/users/#{params[:id]}",
                             parameters: @user
                             )
 
@@ -70,7 +70,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    response = Unirest.delete("http://localhost:3000/users/#{params['id']}")
+    response = Unirest.delete("http://localhost:3000/api/users/#{params['id']}")
     if response.code == 200
     flash[:success] = "Successfully removed profile"
     redirect_to "/"

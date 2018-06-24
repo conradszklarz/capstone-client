@@ -19,6 +19,7 @@ def create
   if response.code == 201
     session[:jwt] = response.body["jwt"]
     user_id = response.body["user"]["id"]
+    session[:user_id] = user_id
     flash[:success] = 'Successfully logged in!'
     redirect_to "/users/#{user_id}"
   else

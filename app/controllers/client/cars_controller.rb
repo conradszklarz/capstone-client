@@ -21,12 +21,12 @@ class Client::CarsController < ApplicationController
 
   def create
     @car = {
-                   'user_id' => params[:user_id],
-                   'year' => params[:year],
-                   'make' => params[:make],
-                   'model' => params[:model],
-                   'mileage' => params[:mileage]
-                  }
+            'user_id' => session[:user_id],
+            'year' => params[:year],
+            'make' => params[:make],
+            'model' => params[:model],
+            'mileage' => params[:mileage]
+            }
 
     response = Unirest.post(
                             "http://localhost:3000/api/cars",

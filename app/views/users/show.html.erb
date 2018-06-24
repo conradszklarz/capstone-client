@@ -1,16 +1,10 @@
-<h1>Enter Your Car Information</h1>
-<%= form_tag '/users', method: :post do  %>
-  <div>
-    Year: <input type="text" name="year">
-  </div>
-  <div>
-    Make: <input type="text" name="make">
-  </div>
-  <div>
-    Model: <input type="text" name="model">
-  </div>
-  <div>
-    Mileage: <input type="decimal" name="mileage">
-  </div>
-  <input type="submit" value="Submit">
+<% if @user["cars"].length == 0 %>
+  <a href="/client/cars/new">Add your first car</a>
+<% else %>
+  <% @user["cars"].each do |car| %>
+    <h4>Year: <%= car["year"] %></h4>
+    <h4>Make: <%= car["make"] %></h4>
+    <h4>Model: <%= car["model"] %></h4>
+    <h4>Mileage: <%= car["mileage"] %></h4>
+  <% end %>
 <% end %>

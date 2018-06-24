@@ -22,7 +22,6 @@ class Client::MaintenanceEventsController < ApplicationController
   def create
     @maintenance_event = {
                    'car_id' => params[:car_id],
-                   'price' => params[:price],
                    'provider' => params[:provider],
                    'price' => params[:price],
                    'date' => params[:date],
