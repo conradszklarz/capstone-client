@@ -6,5 +6,11 @@
     <h4>Make: <%= car["make"] %></h4>
     <h4>Model: <%= car["model"] %></h4>
     <h4>Mileage: <%= car["mileage"] %></h4>
-  <% end %>
+
+    <ul>
+    <% car["alerts"].each do |alert| %>
+      <li><%= alert %></li>
+    <% end %>
+    </ul>
+ <% end %>
 <% end %>
