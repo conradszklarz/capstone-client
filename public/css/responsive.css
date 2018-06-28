@@ -1,0 +1,230 @@
+
+@media (max-width: 1199px) {
+.navbar ul li {
+    margin: 0 auto;
+    line-height: 40px;
+    padding-left: 0;
+    padding-right: 0;
+}
+ .navbar-nav>li>a {
+    margin-left: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333333;
+    padding-bottom: 43px;
+    line-height: normal;
+}
+ .navbar-nav>li>a:hover {
+    margin-left: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333333;
+    padding-bottom: 43px;
+    line-height: normal;
+	border-bottom:none;
+}
+ul.nav.navbar-nav.pullleft {
+   margin-left: 75px; 
+}
+
+.navbar-nav {
+    float: left !important;
+    /* margin: 7.5px -15px; */
+    text-align: left;
+}
+.navbar-nav>li {
+    padding: 23px 0;
+}
+}
+@media (max-width: 991px) {
+.navbar-default
+{
+	padding: 10px 0;
+	margin-bottom:0px;
+}
+.nav-second-main
+{
+	display:block;
+}
+.banner-inner{
+    text-align: center;
+}
+section.about img{
+    width: 100%;
+}
+.navbar-header 
+{
+	float: none;
+}
+.navbar-toggle 
+{
+	display: block;
+}
+.navbar-collapse
+{
+	border-top: 1px solid transparent;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+   .navbar-collapse.collapse.in { 
+        display: block!important; 
+    }
+	.navbar-brand {
+    padding: 0px 15px;
+}
+.affix
+{
+    position: fixed ; 
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.title 
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+  .navbar-collapse.collapse {
+        display: none!important;
+    }
+}
+@media (max-width: 768px) {
+.car-service-title
+{
+	font-size: 100px;
+    padding: 0;
+    margin: 0 auto;
+
+}
+.title-right
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.car-wash-description
+{
+    padding-top: 0;
+}
+.col-md-9.col-sm-9.form.text-center 
+{
+    width: 100%;
+}
+}
+@media (max-width: 767px) {
+input.form-control, textarea.form-control ,select.form-control
+{
+    margin-bottom: 20px;
+}
+section.welcome img{
+    width: 100%;
+}
+.nopadding
+{
+	padding:10px;
+}
+.number
+{
+	text-align:center;
+	float:none;
+}
+.title-about
+{
+	text-align:center;
+}
+.title-team
+{
+	text-align:center;
+}
+.blog h1, .contact h1
+{
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:20px;
+}
+.title 
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.terms
+{    
+	background-color: #182430;
+    color: #777777;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.form-group 
+{
+	margin-bottom: 0px;
+}
+input.form-control, textarea.form-control
+ {
+ 
+    margin-bottom: 25px;
+}
+
+.affix
+{
+	padding-top:15px;
+}
+.navbar-toggle
+{
+    margin-top: 0;
+}
+
+}
+@media (max-width: 480px) {
+    
+    .btn-blue{
+    padding-left: 50px;
+    padding-right: 50px;
+        margin-left: 30px;
+    }
+    .banner-overlay{
+        padding:40px 0px;
+    }
+    .banner-overlay h2{
+        font-size: 40px;
+    }
+    .banner-captoin h1{
+        font-size: 30px;
+    }
+    .banner-overlay p{
+        font-size: 15px;
+    }
+}
