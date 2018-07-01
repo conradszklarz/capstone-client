@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>Car Wash Home</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -14,12 +14,12 @@
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/responsive.css" />
 
-</head>
+  </head>
 
-<body>
+  <body>
 
 <!-- start of navbar -->
-<nav class="navbar navbar-default nav-pills nav-stacked" data-spy="affix" data-offset-top="197">
+  <nav class="navbar navbar-default nav-pills nav-stacked" data-spy="affix" data-offset-top="197">
         <div class="container-fluid">
     <div class="container">
           <div class="navbar-header">
@@ -45,161 +45,168 @@
                         </li>           <li> <a href="contact.html"> Contact</a> </li>
     </ul>
             <ul class="navbar-right top-social">
-        <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></i></a> </li>
         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
         <li><a href="#"><i class="fa  fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
-            </ul>
+        
           </div>
       </div>
         </div>
-      </nav>
-      <!-- end of navbar -->
+  </nav>
+        <!-- end of navbar -->
 
 
+      <div class="container main-content">
 
-<section class="schdule">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9 col-sm-9  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <div class="car-service-title">03</div>
-        <div class="title-right">Schedule Maintenance<br />
-        Service Online
+        <% if @jwt %>        
+          <a href="/logout" data-method="delete">Log Out</a>
+        <% else %>
+          <a href="/signup">Sign Up</a>
+          <a href="/login">Log In</a>
+        <% end %>
+
+        <%= yield %>
+
       </div>
-      <% if @jwt %>        
-    <a href="/logout" data-method="delete">Log Out</a>
-  <% else %>
-    <a href="/signup">Sign Up</a>
-    <a href="/login">Log In</a>
-  <% end %>
-  <%= yield %>
-    </div>
-    </div>
-    <div class="row">
-      <div class="col-md-9 col-sm-9 form text-center  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
 
 
-<div class="container-fluid footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3 nopadding">
-        <h4>About Us </h4>
-        <p>Lorem ipsum dolor sit amet, consecttuer adipiscing elit. Aenean commodo eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur dolor ridiculus mus.</p>
+  <section class="schdule">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-sm-9  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <div class="car-service-title"></div>
+          <div class="title-right"><br />
+          
+        </div>
+       
+
+
       </div>
-      <div class="col-sm-3 recent">
-      <h4>Recent Post </h4>
-      <ul>
-        <li><i class="fa fa-angle-right" aria-hidden="true"></i> Nulla consequat massa quis enim.</li>
-        <hr />
-        <li><i class="fa fa-angle-right" aria-hidden="true"></i> Nullam dictum felis eu pede mollis pretium </li>
-        <hr />
-        <li><i class="fa fa-angle-right" aria-hidden="true"></i> Integer tincidunt. Cras dapibus.</li>
-        <hr />
-        <li><i class="fa fa-angle-right" aria-hidden="true"></i> Vivamus elementum semper nisi.</li>
-      </ul>
       </div>
-      <div class="col-sm-3 footer-gallery">
-      <h4>Media Gallery</h4>
+      <div class="row">
+        <div class="col-md-9 col-sm-9 form text-center  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container-fluid footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 nopadding">
+          <h4>About Us </h4>
+          <p>Cars are not only tools that we use to get us to our destination, but they are also investments. </p>
+        </div>
+        <div class="col-sm-3 recent">
+        <h4>Recent Post </h4>
         <ul>
-          <li><img src="/img/gallery1.jpg" /></li>
-          <li><img src="/img/gallery2.jpg" /></li>
-          <li><img src="/img/gallery3.jpg" /></li>
-          <li><img src="/img/gallery1.jpg" /></li>
-          <li><img src="/img/gallery2.jpg" /></li>
-          <li><img src="/img/gallery3.jpg" /></li>
-          <li><img src="/img/gallery1.jpg" /></li>
-          <li><img src="/img/gallery2.jpg" /></li>
-          <li><img src="/img/gallery3.jpg" /></li>
+          <li><i class="fa fa-angle-right" aria-hidden="true"></i> Nulla consequat massa quis enim.</li>
+          <hr />
+          <li><i class="fa fa-angle-right" aria-hidden="true"></i> Nullam dictum felis eu pede mollis pretium </li>
+          <hr />
+          <li><i class="fa fa-angle-right" aria-hidden="true"></i> Integer tincidunt. Cras dapibus.</li>
+          <hr />
+          <li><i class="fa fa-angle-right" aria-hidden="true"></i> Vivamus elementum semper nisi.</li>
         </ul>
-      
-      
-      </div>
-      <div class="col-sm-3">
-      <h4>Contact Info </h4>
-      <div class="address">
-       <p><i class="fa fa-home"></i> &nbsp;&nbsp;&nbsp; D-45, North Avanue, South Africa. </p>
-        <p><i class="fa fa-map-marker"></i> &nbsp;&nbsp;&nbsp; <a href="#">+75 123 4567</a></p>
-        <p><i class="fa fa-phone"></i> &nbsp;&nbsp; <a href="#">+75 321 7654</a></p>
-        <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; <a href="#">info@domainname.com </a></p>
+        </div>
+        <div class="col-sm-3 footer-gallery">
+        <h4>Media Gallery</h4>
+          <ul>
+            <li><img src="/img/gallery1.jpg" /></li>
+            <li><img src="/img/gallery2.jpg" /></li>
+            <li><img src="/img/gallery3.jpg" /></li>
+            <li><img src="/img/gallery1.jpg" /></li>
+            <li><img src="/img/gallery2.jpg" /></li>
+            <li><img src="/img/gallery3.jpg" /></li>
+            <li><img src="/img/gallery1.jpg" /></li>
+            <li><img src="/img/gallery2.jpg" /></li>
+            <li><img src="/img/gallery3.jpg" /></li>
+          </ul>
+        
+        
+        </div>
+        <div class="col-sm-3">
+        <h4>Contact Info </h4>
+        <div class="address">
+         <p><i class="fa fa-home"></i> &nbsp;&nbsp;&nbsp; Lemont, IL. </p>
+          <p><i class="fa fa-phone"></i> &nbsp;&nbsp; <a href="#">(219)677-4256</a></p>
+          <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; <a href="#">conradszklarz@gmail.com </a></p>
+        </div>
+        </div>
       </div>
       </div>
     </div>
+  <div class="terms">
+    <div class="container"> 
+    <span class="pull-left"> &copy; 2016 All Rights Reserved. Terms of Use and Privacy Policy</span> 
+    <span class="pull-right"> 
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+      
+      <a href="#"><i class="fa  fa-google-plus"></i></a>
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-vimeo"></i></a> 
+      
+      
+      <a href="#"><i class="fa fa-rss"></i></a> 
+    </span>
     </div>
   </div>
-<div class="terms">
-  <div class="container"> 
-  <span class="pull-left"> &copy; 2016 All Rights Reserved. Terms of Use and Privacy Policy</span> 
-  <span class="pull-right"> 
-    <a href="#"><i class="fa fa-facebook"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa  fa-google-plus"></i></a>
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-vimeo"></i></a> 
-    <a href="#"><i class="fa fa-pinterest"></i></a> 
-    <a href="#"><i class="fa fa-pinterest"></i></a> 
-    <a href="#"><i class="fa fa-rss"></i></a> 
-  </span>
-  </div>
-</div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
 
- 
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/js/owl.carousel.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
+   
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/js/owl.carousel.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
 
 
-<script type="text/javascript">
-$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
- 
-});
-</script> 
-<script>
-               $(function(){
-    $(".dropdown").hover(            
-            function() {
-                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-                $(this).toggleClass('open');
-                $('b', this).toggleClass("caret caret-up");                
-            },
-            function() {
-                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-                $(this).toggleClass('open');
-                $('b', this).toggleClass("caret caret-up");                
-            });
-            
-            $('.pop_service_sec').click(function(){
-                var id = $(this).attr('data-id');
-                $('.overlay-content').css('display','none')
-                $('#'+id).css('display','block');
-                
-            });
+  <script type="text/javascript">
+  $(document).ready(function() {
+   
+    $("#owl-demo").owlCarousel({
+   
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+   
+        // "singleItem:true" is a shortcut for:
+        // items : 1, 
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+   
     });
-    
-</script>
+   
+  });
+  </script> 
+  <script>
+                 $(function(){
+      $(".dropdown").hover(            
+              function() {
+                  $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                  $(this).toggleClass('open');
+                  $('b', this).toggleClass("caret caret-up");                
+              },
+              function() {
+                  $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                  $(this).toggleClass('open');
+                  $('b', this).toggleClass("caret caret-up");                
+              });
+              
+              $('.pop_service_sec').click(function(){
+                  var id = $(this).attr('data-id');
+                  $('.overlay-content').css('display','none')
+                  $('#'+id).css('display','block');
+                  
+              });
+      });
+      
+  </script>
 
-  
-</body>
+    
+  </body>
 </html>

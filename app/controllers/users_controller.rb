@@ -47,10 +47,9 @@ class UsersController < ApplicationController
 
   def update
     @user = {
-                      'id' => params[:id],
-                     'email' => params[:email],
-                     
-                    }
+             'id' => params[:id],
+             'email' => params[:email],
+             }
 
     response = Unirest.patch(
                             "http://localhost:3000/api/users/#{params[:id]}",
