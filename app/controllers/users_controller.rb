@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     @user = {
              'id' => params[:id],
              'email' => params[:email],
-             }
+            }
 
     response = Unirest.patch(
                             "http://localhost:3000/api/users/#{params[:id]}",
