@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>FixMyRide</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -9,17 +9,32 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="/css/owl.theme.css" />
   <link rel="stylesheet" href="/css/owl.carousel.css" />
-
-  <link rel="stylesheet" href="/css/animate.css" />
+        <link rel="stylesheet" href="/css/animate.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/responsive.css" />
 
-  </head>
+</head>
 
-  <body>
+<body>
+<div class="banner">
+  <div class="container-fluid no-padding">
+    <div class="row">
+      <div class="banner-overlay">
+      <div class="banner-captoin">
+        <h1>FixMyRide</h1>
+        <h2></h2>
+        <div class="border"></div>
+        <p>COMPLETE AUTO SERVICES</p>
+      </div>
+      
+      </div>
+    </div>
+    
+         
+    </div>
+ </div>
 
-<!-- start of navbar -->
-  <nav class="navbar navbar-default nav-pills nav-stacked" data-spy="affix" data-offset-top="197">
+<nav class="navbar navbar-default nav-pills nav-stacked" data-spy="affix" data-offset-top="197">
         <div class="container-fluid">
     <div class="container">
           <div class="navbar-header">
@@ -29,13 +44,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="/img/" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="/img/logo.png" alt=""></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav pullleft">
             <li class="active"> <a href="index.html">Home </a> </li>
                     <li> <a href="about.html">Parts</a> </li>
-                    <li> <a href="service.html">How To</a> </li>
+                    <li> <a href="service.html">Services</a> </li>
   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Shopping Cart</a>
                             <ul class="dropdown-menu">
                                 <li><a href="blog-fullwidth.html">blog-fullwidth</a></li>
@@ -45,166 +60,331 @@
                         </li>           <li> <a href="contact.html"> Contact</a> </li>
     </ul>
             <ul class="navbar-right top-social">
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></i></a> </li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-github"></i></a></li>
         <li><a href="#"><i class="fa  fa-medium"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        
+            </ul>
           </div>
       </div>
         </div>
-  </nav>
-        <!-- end of navbar -->
-
-
-      <div class="container main-content">
-
-        <% if @jwt %>        
-          <a href="/logout" data-method="delete">Log Out</a>
-        <% else %>
-          <a href="/signup">Sign Up</a>
-          <a href="/login">Log In</a>
-        <% end %>
-
-        <%= yield %>
-
+      </nav>
+<section class="welcome">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 numbers  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="car-service-title"> </div>
       </div>
-
-
-  <section class="schdule">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9 col-sm-9  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-          <div class="car-service-title"></div>
-          <div class="title-right"><br />
-          
-        </div>
-       
-
-
+      <div class="col-md-6 col-sm-6 nopadding  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="title">Welcome To The Workshop</div>
+      <div class="clearfix"></div>
+      <div class="text margint30 ">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p></div>
       </div>
-      </div>
-      <div class="row">
-        <div class="col-md-9 col-sm-9 form text-center  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        </div>
-      </div>
+      <div class="col-md-4 col-sm-4  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <img src="/img/img1.jpg" class="img-responsive" alt="" />
+      
       </div>
     </div>
-  </section>
-
-
-  <div class="container-fluid footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 nopadding">
-          <h4>About Us </h4>
-          <p>Cars are not only tools that we use to get us to our destination, but they are also investments. We at FixMyRide help you to remember to stay current on your car/s maintenance needs to ensure you get to your destination safely, and to significantly lower chances of getting stranded far away from home.</p>
-        </div>
-        <div class="col-sm-3 recent">
-        <h4>Recent Post </h4>
-        <ul>
-          <li><i class="fa fa-angle-right" aria-hidden="true"></i> I love this app!</li>
-          <hr />
-          <li><i class="fa fa-angle-right" aria-hidden="true"></i> Where have you been all my life! </li>
-          <hr />
-          <li><i class="fa fa-angle-right" aria-hidden="true"></i> Peace of mind knowing my family will have safe and reliable transportation.</li>
-          <hr />
-          <li><i class="fa fa-angle-right" aria-hidden="true"></i> I'm going to show everyone I know.</li>
-        </ul>
-        </div>
-        <div class="col-sm-3 footer-gallery">
-        <h4>Media Gallery</h4>
-          <ul>
-            <li><img src="/img/gallery1.jpg" /></li>
-            <li><img src="/img/gallery2.jpg" /></li>
-            <li><img src="/img/gallery3.jpg" /></li>
-            <li><img src="/img/img1.jpg" /></li>
-            <li><img src="/img/img2.jpg" /></li>
-            <li><img src="/img/img3.jpg" /></li>
-            <li><img src="/img/img4.jpg" /></li>
-            <li><img src="/img/img5.jpg" /></li>
-            <li><img src="/img/img6.jpg" /></li>
-          </ul>
-        
-        
-        </div>
-        <div class="col-sm-3">
-        <h4>Contact Info </h4>
-        <div class="address">
-         <p><i class="fa fa-home"></i> &nbsp;&nbsp;&nbsp; Lemont, IL. </p>
-          <p><i class="fa fa-phone"></i> &nbsp;&nbsp; <a href="#">(219)677-4256</a></p>
-          <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; <a href="#">conradszklarz@gmail.com </a></p>
-        </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  <div class="terms">
-    <div class="container"> 
-    <span class="pull-left"> &copy; 2016 All Rights Reserved. Terms of Use and Privacy Policy</span> 
-    <span class="pull-right"> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      
-      <a href="#"><i class="fa fa-github"></i></a>
-      <a href="#"><i class="fa fa-medium"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      
-    </span>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-md-offset-4 col-sm-offset-4 margint30"><img src="/img/img2.jpg" class="img-responsive" alt="" /></div>
+      <div class="col-md-4 col-sm-4 margint30"><img src="/img/img3.jpg" class="img-responsive" alt="" /></div>
     </div>
   </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+</section>
+<section class="car-service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div id="owl-demo" class="owl-carousel owl-theme">
+          <div class="item"><img src="/img/img4.jpg" alt="The Last of us"></div>
+          <div class="item"><img src="/img/img4.jpg" alt="The Last of us"></div>
+          <div class="item"><img src="/img/img4.jpg" alt="The Last of us"></div> 
+        </div>
+      </div>
+    <div class="col-md-6 col-sm-6 nopadding  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
 
-   
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/js/owl.carousel.js"></script>
-  <script src="/js/owl.carousel.min.js"></script>
 
 
-  <script type="text/javascript">
-  $(document).ready(function() {
-   
-    $("#owl-demo").owlCarousel({
-   
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
-   
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-   
-    });
-   
-  });
-  </script> 
-  <script>
-                 $(function(){
-      $(".dropdown").hover(            
-              function() {
-                  $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-                  $(this).toggleClass('open');
-                  $('b', this).toggleClass("caret caret-up");                
-              },
-              function() {
-                  $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-                  $(this).toggleClass('open');
-                  $('b', this).toggleClass("caret caret-up");                
-              });
-              
-              $('.pop_service_sec').click(function(){
-                  var id = $(this).attr('data-id');
-                  $('.overlay-content').css('display','none')
-                  $('#'+id).css('display','block');
-                  
-              });
-      });
+
+  <div class="container main-content">
+
+    <% if @jwt %>        
+      <a href="/logout" data-method="delete">Log Out</a>
+    <% else %>
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Log In</a>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+
+
+
       
-  </script>
+<section class="schdule">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-sm-9  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="car-service-title"></div>
+        <div class="title-right">Schedule Maintenance<br />
+        </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-sm-9 form text-center  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="form-group"> 
+          <div class="row">
+            <div class="col-md-4 col-sm-4"> <input type="text" placeholder="Full Name" class="form-control">  </div>
+            <div class="col-md-4 col-sm-4"><input type="text" class="form-control" placeholder="Email Address"> </div>
+            <div class="col-md-4 col-sm-4"> <input type="text" placeholder="Phone Number" class="form-control">  </div>
+          </div>
+        </div>
+        
+        <div class="form-group"> 
+          <div class="row">
+          <div class="col-md-4 col-sm-4"><select class="form-control"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <option>Choose brand </option>
+                            <option>Choose brand</option>
+                            <option>Choose brand</option>
+                            <option>Choose brand</option>
+                        </select>
+            </div>
+            <div class="col-md-4 col-sm-4"><select class="form-control">
+                            <option>Choose model </option>
+                            <option>Choose model </option>
+                            <option>Choose model </option>
+                            <option>Choose model </option>
+                        </select>
+            </div>
+            <div class="col-md-4 col-sm-4"><select class="form-control">
+                            <option>Select repair part</option>
+                            <option>Select repair part</option>
+                            <option>Select repair part</option>
+                            <option>Select repair part</option>
+                        </select>
+            </div>
+            
+            
+            
+        </div>
+        </div>
+        <div class="form-group"> 
+          <div class="row">
+          <div class="col-md-4 col-sm-4"><select class="form-control">
+                            <option>Service Center Location</option>
+                            <option>Service Center Location</option>
+                            <option>Service Center Location</option>
+                            <<option>Service Center Location</option>
+                        </select>
+            </div>
+            <div class="col-md-4 col-sm-4"> <div class="input-group date">
+                    <input type='date' class="form-control" id="datetpicker" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+              <div class="col-md-4 col-sm-4"> <div class="input-group date">
+                    <input type="time" class="form-control"  id="datetpicker1"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            
+            
+            
+            
+        </div>
+        </div>
+          <div class="form-group"> 
+          <textarea name="" cols="" class="form-control message_text" rows="12">Enter Your Message</textarea>
+        </div>
+      <div class="col-sm-4 col-xs-12 nopadding">
+        <button type="submit" class="btn btn-blue"> SUBMIT</button>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <div class="car-service-title" style="color:#485560;"></div>
+    <div class="title-right white">WHAT OUR <br /> CLIENTS SAY</div>
+  
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4 col-sm-4 wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+      <div class="box">
+        <div class="quote text-center"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+        <p> "Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante."</p>
+        <div class="author text-center">-- JOHN DE --</div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <div class="box">
+    <div class="quote text-center"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+      <p> "Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante."</p>
+      <div class="author text-center">-- JOHN DE --</div>
+    </div>
+    </div>
+    <div class="col-md-4 col-sm-4  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <div class="box">
+    <div class="quote text-center"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+      <p> "Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante."</p>
+      <div class="author text-center">-- JOHN DE --</div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
 
+<section class="blog">
+  <div class="container">
+    <div class="row">
     
-  </body>
-</html>
+    <div class="col-md-12">
+    <div class="col-md-2  nopadding"><span class="number">04</span>
+    </div>
+    <div class="col-md-4"><h1>OUR LATEST BLOG </h1></div>
+  
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4 col-sm-4  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <h3>Donec quam felis, ultricies nec pellentesque eu, pretium quis sem. Nulla consequat massa quis enim.</h3>
+    <div class="blog-author"><strong>By : <span class="blue">John Deo</span>   /  October 07, 2016</strong></div>
+    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+    </div>
+    <div class="col-md-4 col-sm-4  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <h3>Maecenas nec odio et ante tincint tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</h3>
+      <div class="blog-author"><b>By : <span class="blue">John Deo</span>  /  October 07, 2016</b></div>
+    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+    </div>
+    <div class="col-md-4 col-sm-4  wow animated fadeInUp animated animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+    <h3>Donec quam felis, ultricies nec pellentesque eu, pretium quis sem. Nulla consequat massa quis enim.</h3>
+      <div class="blog-author"><b>By : <span class="blue">John Deo</span>  /  October 07, 2016</b></div>
+    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+    </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 nopadding">
+        <h4>About Us </h4>
+        <p>Cars are not only tools that we use to get us to our destination, but they are also investments. We at FixMyRide help you to remember to stay current on your car/s maintenance needs to ensure you get to your destination safely, and to significantly lower chances of getting stranded far away from home.</p>
+      </div>
+      <div class="col-sm-3 recent">
+      <h4>Recent Post </h4>
+      <ul>
+        <li><i class="fa fa-angle-right" aria-hidden="true"></i> I love this app!</li>
+        <hr />
+        <li><i class="fa fa-angle-right" aria-hidden="true"></i> Where have you been all my life! </li>
+        <hr />
+        <li><i class="fa fa-angle-right" aria-hidden="true"></i> Peace of mind knowing my family will have safe and reliable transportation.</li>
+        <hr />
+        <li><i class="fa fa-angle-right" aria-hidden="true"></i> I'm going to show everyone I know.</li>
+      </ul>
+      </div>
+      <div class="col-sm-3 footer-gallery">
+      <h4>Media Gallery</h4>
+        <ul>
+          <li><img src="/img/gallery1.jpg" /></li>
+          <li><img src="/img/gallery2.jpg" /></li>
+          <li><img src="/img/gallery3.jpg" /></li>
+          <!-- <li><img src="/img/gallery1.jpg" /></li>
+          <li><img src="/img/gallery2.jpg" /></li>
+          <li><img src="/img/gallery3.jpg" /></li>
+          <li><img src="/img/gallery1.jpg" /></li>
+          <li><img src="/img/gallery2.jpg" /></li>
+          <li><img src="/img/gallery3.jpg" /></li> -->
+        </ul>
+      
+      
+      </div>
+      <div class="col-sm-3">
+      <h4>Contact Info </h4>
+      <div class="address">
+       <p><i class="fa fa-home"></i> &nbsp;&nbsp;&nbsp; Lemont, IL. </p>
+       <p><i class="fa fa-phone"></i> &nbsp;&nbsp; <a href="#">(219)677-4256</a></p>
+       <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; <a href="#">conradszklarz@gmail.com </a></p>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<div class="terms">
+  <div class="container"> 
+  <span class="pull-left"> &copy; 2016 All Rights Reserved. Terms of Use and Privacy Policy</span> 
+  <span class="pull-right"> 
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <a href="#"><i class="fa  fa-github"></i></a>
+    <a href="#"><i class="fa fa-medium"></i></a> 
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+  </span>
+  </div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+
+     
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+     
+      $("#owl-demo").owlCarousel({
+     
+          navigation : true, // Show next and prev buttons
+          slideSpeed : 300,
+          paginationSpeed : 400,
+          singleItem:true
+     
+          "singleItem:true" is a shortcut for:
+          items : 1, 
+          itemsDesktop : false,
+          itemsDesktopSmall : false,
+          itemsTablet: false,
+          itemsMobile : false
+     
+      });
+     
+    });
+    </script> 
+    <script>
+                   $(function(){
+        $(".dropdown").hover(            
+                function() {
+                    $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                    $(this).toggleClass('open');
+                    $('b', this).toggleClass("caret caret-up");                
+                },
+                function() {
+                    $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                    $(this).toggleClass('open');
+                    $('b', this).toggleClass("caret caret-up");                
+                });
+                
+                $('.pop_service_sec').click(function(){
+                    var id = $(this).attr('data-id');
+                    $('.overlay-content').css('display','none')
+                    $('#'+id).css('display','block');
+                    
+                });
+        });
+        
+    </script>
+
+      
+    </body>
+  </html>
