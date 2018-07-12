@@ -1,24 +1,12 @@
 <h2><%= @car["name"] %></h2>
-<h4>User Id: <%= @car[["user_id"] %></h4>
+<h4>User Id: <%= @car["user_id"] %></h4>
 <h4>Year: <%= @car["year"] %></h4>
 <h4>Make: <%= @car["make"] %></h4>
 <h4>Model: <%= @car["model"] %></h4>
 <h4>Mileage: <%= @car["mileage"] %></h4>
 
-<% @car["images"].each do |image| %>
-  <!-- <img src="<%= image["url"] %>"> -->
-<% end %>
 <br>
 
-<%= form_tag "/client/cars", method: :post do %>
-  <!-- <input type="hidden" name="car_id" value="<%= @car['id'] %>"> -->
-  <div>
-    <!-- Quantity: <input type="text" name="quantity"> -->
-  </div>
-  <!-- <input type="submit" value="Add To Cart"> -->
-<% end %>
-
-<!-- <h6>Supplier: <%= @car["supplier"]["name"] %></h6> -->
 
 
 <a href="/client/cars/<%= @car['id'] %>/edit">Edit</a>

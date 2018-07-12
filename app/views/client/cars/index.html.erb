@@ -2,10 +2,13 @@
 
 <%= @cars.each do |car| %>
 <p>
-  <%= car["user_id"] %> 
+  <a href="/client/cars/#{car['id']}"><%= car["user_id"] %></a>
   <%= car["year"] %> 
   <%= car["make"] %> 
   <%= car["model"] %>
   <%= car["mileage"] %>
 </p>
 <% end %>
+
+
+<!-- in navbar add link that takes them to car new page -->
