@@ -1,14 +1,13 @@
 <h1>Cars</h1>
 
-<%= @cars.each do |car| %>
-<p>
-  <a href="/client/cars/#{car['id']}"><%= car["user_id"] %></a>
-  <%= car["year"] %> 
-  <%= car["make"] %> 
-  <%= car["model"] %>
-  <%= car["mileage"] %>
-</p>
+<% @cars.each_with_index do |car, index| %>
+  <div>
+    <h3>Car # <%= index + 1 %></h3>
+    <h5><%= car["year"] %> <%= car["make"] %> <%= car["model"] %> </h5>
+    <h5>Mileage: <%= car["mileage"] %></h5>
+  </div>
+  <a class="btn btn-primary" href="/client/cars/<%= car['id'] %>">Maintenance History for Car # <%= index + 1 %></a>
+  <br>
 <% end %>
 
 
-<!-- in navbar add link that takes them to car new page -->

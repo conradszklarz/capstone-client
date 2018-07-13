@@ -1,12 +1,24 @@
-<h2><%= @car["name"] %></h2>
-<h4>User Id: <%= @car["user_id"] %></h4>
+
 <h4>Year: <%= @car["year"] %></h4>
 <h4>Make: <%= @car["make"] %></h4>
 <h4>Model: <%= @car["model"] %></h4>
 <h4>Mileage: <%= @car["mileage"] %></h4>
 
 <br>
-
+<% @car['maintenance_events'].each do |maintenance_event| %>
+  <p>
+    <%= maintenance_event["price"] %> 
+    <%= maintenance_event["provider"] %> 
+    <%= maintenance_event["date"] %>
+  </p>
+  <ul>
+    <% maintenance_event['services'].each do |service| %>
+      <li>
+        <%= service["name"] %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 
 
 <a href="/client/cars/<%= @car['id'] %>/edit">Edit</a>

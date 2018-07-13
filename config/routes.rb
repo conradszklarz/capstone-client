@@ -48,6 +48,7 @@ namespace :client do
       delete '/cars/:id' => 'cars#destroy'
 
       
+
       get '/maintenance_events' => 'maintenance_events#index'
       get '/maintenance_events/new' => 'maintenance_events#new'
       post'/maintenance_events' => 'maintenance_events#create'
