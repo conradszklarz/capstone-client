@@ -6,18 +6,18 @@
   </ul>
 <% end %>
 
-<%= form_tag "/client/maintenane_events", method: :post do %>
+<%= form_tag "/client/maintenance_events", method: :post do %>
   <div>
-    Provider: <input type="text" name="provider" value="<%= @maintenane_event['provider'] %>" />
+    Provider: <input type="text" name="provider" value="<%= @maintenance_event['provider'] %>" />
   </div>
   <div>
-    Price: <input type="text" name="price" value="<%= @maintenane_event['price'] %>" />
+    Price: <input type="text" name="price" value="<%= @maintenance_event['price'] %>" />
   </div>
   <div>
-    Date: <input type="text" name="date" value="<%= @maintenane_event['date'] %>" />
+    Date: <input type="text" name="date" value="<%= @maintenance_event['date'] %>" />
   </div>
   <div>
-    Car Id: <input type="text" name="car_id" value="<%= @maintenane_event['car_id'] %>">
+    
   </div>
-  <input type="submit" name="" value="Create Car Part" />
+  <input type="submit" name="" value="Create Maintenance Event" />
 <% end %>

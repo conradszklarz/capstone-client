@@ -43,10 +43,6 @@ class UsersController < ApplicationController
     response = ApiHelper.get("/users/#{user_id}")    
     @user = response.body
     render 'show.html.erb'
-
-    # response_2 = Unirest.get("")
-    # @amazonparts = response_2.body
-    # render 'show.html.erb'
   end
 
   def update

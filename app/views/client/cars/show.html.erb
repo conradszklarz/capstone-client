@@ -3,14 +3,21 @@
 <h4>Make: <%= @car["make"] %></h4>
 <h4>Model: <%= @car["model"] %></h4>
 <h4>Mileage: <%= @car["mileage"] %></h4>
+<br>
 
 <br>
 <% @car['maintenance_events'].each do |maintenance_event| %>
   <p>
-    <%= maintenance_event["price"] %> 
-    <%= maintenance_event["provider"] %> 
-    <%= maintenance_event["date"] %>
-  </p>
+    <h4>Date:<h4> <%= maintenance_event["date"] %>
+    <br> 
+    <h4>Provider:</h4> <%= maintenance_event["provider"] %> 
+    <br>
+    <h4>Price:</h4>$ <%= maintenance_event["price"] %>
+    <br>
+    <h4>Mileage:</h4> <%= maintenance_event["mileage"] %>
+      <br>
+      <h4>Service Performed:</h4>
+</p>
   <ul>
     <% maintenance_event['services'].each do |service| %>
       <li>
@@ -18,8 +25,22 @@
       </li>
     <% end %>
   </ul>
+  <br>
+  <br>
 <% end %>
 
 
 <a href="/client/cars/<%= @car['id'] %>/edit">Edit</a>
 <a href="/client/cars/<%= @car['id'] %>" data-method="delete">Delete</a>
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => 'client/maintenance_events/new', locals: {maintenance_events: @car['maintenance_events']} %>
+
+

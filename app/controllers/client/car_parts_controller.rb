@@ -48,7 +48,13 @@ class Client::CarPartsController < ApplicationController
     car_part_id = params[:id]
     response = Unirest.get("http://localhost:3000/api/car_parts/#{car_part_id}")
     @car_part = response.body
+
+    response2 = Unirest.get("")
+    @eapi = response2.body
+    
     render 'show.html.erb'
+
+    
   end
 
   def edit

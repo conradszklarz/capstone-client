@@ -1,0 +1,18 @@
+<%= form_tag "/client/maintenance_events", method: :post do %>
+  <div>
+    Provider: <input type="text" name="provider">
+  </div>
+  <div>
+    Price: <input type="decimal" name="price">
+  </div>
+  <div>
+    Date: <input type="text" name="date">
+  </div>
+  <div>
+    Mileage: <input type="decimal" name="mileage">
+  </div>
+  <div>
+    <input type="hidden" name="car_id" value="<%= params[:id] %>">
+  </div>
+  <input type="Submit" name='Submit'>
+<% end %>

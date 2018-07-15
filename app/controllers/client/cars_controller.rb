@@ -49,6 +49,8 @@ class Client::CarsController < ApplicationController
     car_id = params[:id]
     response = Unirest.get("http://localhost:3000/api/cars/#{car_id}")
     @car = response.body
+    @maintenance_events = @car['maintenance_events']
+
     render 'show.html.erb'
   end
 
