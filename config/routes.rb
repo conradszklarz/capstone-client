@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/users/:id/:edit' => 'users#edit'
   patch '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
-  get '/users/:id' => 'users#show'
+  get '/user_profile' => 'users#show'
   post '/users' => 'users#create'
 
   get "/login" => "sessions#new"

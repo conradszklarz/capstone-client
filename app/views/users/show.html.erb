@@ -6,8 +6,8 @@
     <h4>Make: <%= car["make"] %></h4>
     <h4>Model: <%= car["model"] %></h4>
     <h4>Mileage: <%= car["mileage"] %></h4>
-
     <ul>
+      <br>
     <% car["alerts"].each do |alert| %>
       <li><%= alert %></li>
     <% end %>

@@ -39,8 +39,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    user_id = params[:id]
-    response = ApiHelper.get("/users/#{user_id}")    
+    # user_id = params[:id]
+    response = ApiHelper.get("/user_profile")    
     @user = response.body
     render 'show.html.erb'
   end

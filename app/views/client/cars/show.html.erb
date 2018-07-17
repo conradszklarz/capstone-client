@@ -6,28 +6,26 @@
 <br>
 
 <br>
-<% @car['maintenance_events'].each do |maintenance_event| %>
-  <p>
-    <h4>Date:<h4> <%= maintenance_event["date"] %>
-    <br> 
-    <h4>Provider:</h4> <%= maintenance_event["provider"] %> 
-    <br>
-    <h4>Price:</h4>$ <%= maintenance_event["price"] %>
-    <br>
-    <h4>Mileage:</h4> <%= maintenance_event["mileage"] %>
-      <br>
-      <h4>Service Performed:</h4>
-</p>
-  <ul>
-    <% maintenance_event['services'].each do |service| %>
-      <li>
-        <%= service["name"] %>
-      </li>
-    <% end %>
-  </ul>
-  <br>
-  <br>
-<% end %>
+<div class="row">
+  <% @car['maintenance_events'].each do |maintenance_event| %>
+    <div class="col-md-4">
+      
+      <div class="thumbnail service-card">
+        <a href="/client/maintenance_events/<%= maintenance_event['id'] %>" class="card-header"><%= maintenance_event["formatted_time"] %></a>
+        <div class="card-body text-info">
+          <h5 class="card-title">Provider: <%= maintenance_event["provider"] %></h5>
+          <h5 class="card-title">Price: <%= number_to_currency(maintenance_event["price"]) %></h5>
+          <ul class="card-text">
+            <% maintenance_event['services'].each do |service| %>
+              <li>Service Performed: <%= service["name"] %> </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
 
 
 <a href="/client/cars/<%= @car['id'] %>/edit">Edit</a>

@@ -1,23 +1,10 @@
 <h2><%= @maintenance_event["name"] %></h2>
-<h4>Price: <%= @maintenance_event[["price"] %></h4>
-<h4>Car Id: <%= @maintenance_event["car_id"] %></h4>
-<h4>Provider: <%= @maintenance_event["provider"] %></h4>
 <h4>Date: <%= @maintenance_event["date"] %></h4>
+<h4>Provider: <%= @maintenance_event["provider"] %></h4>
+<h4>Price: <%= @maintenance_event["price"] %></h4>
+<h4>Mileage: <%= @maintenance_event["mileage"] %></h4>
 
-<% @maintenance_event["images"].each do |image| %>
-  <!-- <img src="<%= image["url"] %>"> -->
-<% end %>
 <br>
-
-<%= form_tag "/client/maintenance_events", method: :post do %>
-  <!-- <input type="hidden" name="maintenance_event_id" value="<%= @maintenance_event['id'] %>"> -->
-  <div>
-    <!-- Quantity: <input type="text" name="quantity"> -->
-  </div>
-  <!-- <input type="submit" value="Add To Cart"> -->
-<% end %>
-
-<!-- <h6>Supplier: <%= @maintenance_event["supplier"]["name"] %></h6> -->
 
 
 <a href="/client/maintenance_events/<%= @maintenance_event['id'] %>/edit">Edit</a>
